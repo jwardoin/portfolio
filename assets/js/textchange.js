@@ -1,4 +1,4 @@
-$(function () {
+function textChange() {
     var messages = [],
         index = 0;
 
@@ -9,7 +9,7 @@ $(function () {
 
 
     function cycle() {
-        $('#textChange').html(messages[index]);
+        document.querySelector('#textChange').innerText = messages[index]
         index++;
 
         if (index === messages.length) {
@@ -20,4 +20,4 @@ $(function () {
     }
 
     cycle();
-})
+}
